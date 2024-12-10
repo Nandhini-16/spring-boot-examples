@@ -25,6 +25,8 @@ stages:
       - job: "Junit"
         displayName: "Running unit test"
         steps:
+          - script: ls -la /home/vsts/work/1/s/
+            displayName: 'List contents of working directory'
           - script: echo "Running the java application unit test"
           - task: Maven@4
             inputs:
